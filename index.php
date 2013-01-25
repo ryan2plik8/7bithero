@@ -127,6 +127,7 @@ $comments = $arr->data->comments;
 
     <div class="content">
       <div class="primary">
+        <?php $i = 0; ?>
         <?php foreach($array as $item): ?>
           <div class="fb-entry">
             <div class="padding">
@@ -157,6 +158,7 @@ $comments = $arr->data->comments;
               <p><?php echo $comment->message; ?></p>
             </div><!-- end comments -->
           <?php endforeach; ?>
+          <?php if(++$i > 3) break; ?>
         <?php endforeach; ?>
       </div>
     </div><!-- end content -->
