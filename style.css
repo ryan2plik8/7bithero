@@ -1,0 +1,245 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	background:url(images/background.jpg) repeat-x -100% 480px;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+@font-face {
+    font-family: 'geared_slabregular';
+    src: url('fonts/geared/gearedslab-webfont.eot');
+    src: url('fonts/geared/gearedslab-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/geared/gearedslab-webfont.woff') format('woff'),
+         url('fonts/geared/gearedslab-webfont.ttf') format('truetype'),
+         url('fonts/geared/gearedslab-webfont.svg#geared_slabregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+p {
+	font-family: Arial;
+	font-size: 13px;
+	line-height: 1.4;
+	color: #20597d;
+}
+
+h1 {
+	font-size: 18px;
+	text-transform: uppercase;
+}
+
+html {
+	background: url('images/bg.png');
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+div.header {
+	background: url(images/header-bg.jpg) no-repeat center top #070d23;
+	width: 100%;
+	height: 59px;
+	border-bottom: 4px solid #ff8fb9;
+}
+
+div.headerContainer {
+	width: 980px;
+	margin: 0 auto;
+	position: relative;
+}
+
+div.logo {
+	position: absolute;
+	float: left;
+}
+
+div.nav{
+	float: left;
+	position: absolute;
+	left: 270px;
+	margin: 18px 0;
+}
+
+div.nav ul li {
+	float: left;
+	display: inline;
+}
+
+div.nav ul li a {
+	margin: 0 30px 0 0;
+	text-transform: uppercase;
+	font-size: 19px;
+}
+
+div.nav ul li:last-child a {
+	margin-right: 0px;
+}
+
+div.signup {
+	float: right;
+	position: relative;
+}
+
+div.signup form {
+	position: relative;
+	float: right;
+}
+
+div.signup form input[type=text] {
+	background: url(images/input-bg.png) no-repeat;
+	border: none;
+	font-size: 19px;
+	text-transform: uppercase;
+	font-family: 'geared_slabregular';
+	padding:6px 9px 4px 10px;
+	width: 251px;
+	margin: 11px 0 0 0;
+}
+
+div.signup form input[type=submit] {
+	background: url(images/submit.png) no-repeat;
+	position: absolute;
+	right: 7px;
+	border: none;
+	width: 20px;
+	height: 20px;
+	top: 17px;
+}
+
+div.slideshow {
+	position: relative;
+}
+
+div.last {
+	position: absolute !important;
+	left: -1338px;
+}
+
+div.slideshowContainer {
+	margin: 0 auto;
+	width: 980px;
+}
+
+div.slide {
+	float: left;
+	position: relative;
+	z-index: -1;
+}
+
+div.slide img{
+	border-bottom: 4px solid #ff8fb9;
+}
+
+div.content {
+	width: 980px;
+	margin:0 auto;
+}
+
+div.primary {
+	width: 693px;
+	overflow: hidden;
+	float: left;
+}
+
+div.fb-entry {
+	width: 100%;
+	overflow: hidden;
+	background: #fff;
+	float: left;
+	margin-top: 40px;
+}
+
+div.padding {
+	padding: 40px;
+}
+
+img.story-image {
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+img.profilepic {
+	float: left;
+	margin-right: 20px;
+	border-radius: 40px;
+}
+
+div.fb-entry div.fb-entry-footer {
+	position: relative;
+}
+
+div.fb-entry div.fb-entry-footer div.padding {
+	padding: 20px 40px;
+}
+
+div.fb-entry-footer div.right {
+	float: right;
+	margin-right: 16px;
+}
+
+div.fb-entry-footer img {
+	position: absolute;
+	right: 13px;
+	top: 14px;
+}
+
+div.fb-entry-footer div.right p {
+	float: left;
+	text-align:right;
+}
+
+div.fb-entry-footer div.left {
+	float: left;
+}
+
+div.fb-entry-footer {
+	border-top: 1px solid #badaec;
+}
+
+div.comments {
+	background: url('images/comments-bg.png') no-repeat top center;
+	overflow: hidden;
+	padding: 40px;
+	margin-bottom: 20px;
+}
+
+div.comments h1 {
+	margin-bottom: 5px;
+}
