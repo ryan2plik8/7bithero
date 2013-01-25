@@ -122,7 +122,7 @@ $data = fetchUrl("https://graph.facebook.com/{$profile_id}/feed?{$authToken}");
 
 $arr = json_decode($data);
 $array = $arr->data;
-$comments = $arr->data->comments; 
+//$comments = $arr->data->comments; 
 ?>
 
     <div class="content">
@@ -131,11 +131,13 @@ $comments = $arr->data->comments;
         <?php foreach($array as $item): ?>
           <div class="fb-entry">
             <div class="padding">
-            <?php if($item->object_id): ?>
+            <?php if(isset($item->object_id)): ?>
               <img class="story-image" src="<?php echo 'https://graph.facebook.com/'.$item->object_id.'/picture?type=normal'; ?>"/>
             <?php endif; ?>
+            <?php if(isset($item->message)): ?>
               <p><?php echo nl2br($item->message); ?></p>
-            <?php if($item->story): ?>
+            <?php endif; ?>
+            <?php if(isset($item->story)): ?>
               <p><?php echo $item->story; ?></p>
             <?php endif; ?>
           </div><!-- end padding -->
@@ -151,6 +153,7 @@ $comments = $arr->data->comments;
             </div><!-- end padding -->
           </div><!-- end fb-entry-footer -->
           </div><!-- end fb-entry -->
+          <?php if(isset($item->comments->data)): ?>
           <?php foreach($item->comments->data as $comment): ?>
             <div class="comments">
               <img class="profilepic" src="http://graph.facebook.com/<?php echo $comment->from->id; ?>/picture?type=normal" width="60">
@@ -158,7 +161,8 @@ $comments = $arr->data->comments;
               <p><?php echo $comment->message; ?></p>
             </div><!-- end comments -->
           <?php endforeach; ?>
-          <?php if(++$i > 3) break; ?>
+          <?php endif; ?>
+          <?php if(++$i > 5) break; ?>
         <?php endforeach; ?>
       </div>
     </div><!-- end content -->
